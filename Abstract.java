@@ -26,10 +26,10 @@ public class Abstract {
 	public static void main(String[] args) {
 		Bank b;
 		b =new Citi();
-		System.out.println("Citi intrest rates are "+b.getIntrestRate()+"%");
+		System.out.println("Citi intrest rates are "+b.getIntrestRate()+" %");
 		b =new HSBC();
-		System.out.println("HSBC intrest rates are "+b.getIntrestRate()+"%");
+		System.out.println("HSBC intrest rates are "+b.getIntrestRate()+" %");
 		b =new SBI();
-		System.out.println("HSBC intrest rates are "+b.getIntrestRate()+"%");
+		System.out.println("HSBC intrest rates are "+b.getIntrestRate()+" %");
 	}
 }
