@@ -6,7 +6,7 @@ abstract class Car{
 
 class Suzuki extends Car{
 	void accelerate() {
-		System.out.println("Suzuki::Acceleration");
+		System.out.println("hello");
 	}
 }
 public class Abstract {
