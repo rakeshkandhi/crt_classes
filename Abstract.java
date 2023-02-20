@@ -6,7 +6,7 @@ abstract class Car{
 
 class Suzuki extends Car{
 	void accelerate() {
-		System.out.println("hello");
+		System.out.println("this is abstract method");
 	}
 }
 public class Abstract {
