@@ -1,12 +1,12 @@
 package crt_classes;
 
+import java.util.Scanner;
+
 public class Recursive {
 
 	public static int fibonnaciRecursive(int n) {
-		if (n == 1)
+		if (n <= 1)
 			return 1;
-		if (n <= 0)
-			return 0;
 		return fibonnaciRecursive(n - 1) + fibonnaciRecursive(n - 2);
 	}
 
@@ -20,9 +20,26 @@ public class Recursive {
 	}
 
 	public static void main(String[] args) {
-		for (int i = 0; i < 10; i++) {
-			System.out.println(fibonnaciRecursive(i));
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the choice:");
+		System.out.println("1:Fibbonnaci\n2:Factorial");
+		int choice = sc.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("fibonacci range:");
+			int f = sc.nextInt();
+			for (int i = 0; i < f; i++) {
+				System.out.println(fibonnaciRecursive(i));
+			}
+			break;
+		case 2:
+			System.out.println("Enter the number:");
+			int ft = sc.nextInt();
+			System.out.println("The factirial of 5 is " + fatorialRecursive(ft));
+			break;
+		default:
+			System.out.println("Enter the correct choice");
 		}
-		System.out.println(fatorialRecursive(5));
+		sc.close();
 	}
 }
