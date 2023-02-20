@@ -1,10 +1,10 @@
 package crt_classes;
 
-abstract class car{
+abstract class Car{
 	abstract void accelerate();
 }
 
-class Suzuki extends car{
+class Suzuki extends Car{
 	void accelerate() {
 		System.out.println("Suzuki::Acceleration");
 	}
@@ -12,8 +12,8 @@ class Suzuki extends car{
 public class Abstract {
 
 	public static void main(String[] args) {
-		car obj =new Suzuki();
-		obj.accelerate();
+		Suzuki car =new Suzuki();
+		car.accelerate();
 	}
 
 }
