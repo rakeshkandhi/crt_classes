@@ -1,6 +1,10 @@
 package crt_classes;
 
-public class Day_6 {
+interface Bank{
+	float rateofIntrest();
+}
+
+public class Interface {
 
 	public static void main(String[] args) {
 		System.out.println("hello");
