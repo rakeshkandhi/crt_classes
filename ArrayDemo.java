@@ -5,14 +5,16 @@ import java.util.Collections;
 
 public class ArrayDemo {
 	public static void main(String[] args) {
-//		int[] primes = { 2, 3, 5, 7, 11, 13, 17, 19 };
-//		System.out.println(Arrays.toString
-//				(primes));
-//		int i = 0;
-//		while (i < primes.length) {
-//			System.out.println(primes[i]);
-//			i++;
-//		}
+		Integer[] primes = { 7, 11, 19, 13, 17, 2, 3, 5 };
+//		System.out.println(Arrays.toString(primes));
+		int i = 0;
+//		Arrays.sort(primes, Collections.reverseOrder());
+//		System.out.println(Arrays.toString(primes));
+		Arrays.sort(primes);
+		System.out.println(Arrays.toString(primes));
+		for  (i =primes.length-1;i>0;i--)
+			System.out.println(primes[i]);
+
 //		int [][] a = {{1,2,3},{1,2,3},{1,2,3}};
 //		int [][] b = {{1,2,3},{1,2,3},{1,2,3}};
 //		int [][] c = new int[3][3];
@@ -26,8 +28,8 @@ public class ArrayDemo {
 //			}
 //			System.out.println();
 //		}
-		String s[]= {"apple","banana","mango"};
-		Arrays.sort(s,Collections.reverseOrder());
+		String s[] = { "apple", "banana", "mango" };
+		Arrays.sort(s, Collections.reverseOrder());
 		System.out.println(Arrays.toString(s));
 	}
 }
