@@ -6,7 +6,7 @@ import java.util.Collections;
 public class ArrayDemo {
 	public static void main(String[] args) {
 		Integer[] prime = { 7, 11, 19, 13, 17, 2, 3, 5 };
-//		System.out.println(Arrays.toString(primes));
+		System.out.println(Arrays.toString(prime));
 		int i;
 //		int j,k;
 //		Arrays.sort(primes, Collections.reverseOrder());
