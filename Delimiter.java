@@ -9,7 +9,7 @@ class conv {
 			StringBuilder sb = new StringBuilder();
 			for (String s : currencies) {
 				sb.append(s).append(delimiter);
-				result = sb.deleteCharAt(sb.length() - 1).toString();
+				result = sb.deleteCharAt(sb.length() - 1).toString()+" ";
 			}
 		}
 		return result;
