@@ -4,7 +4,7 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
-public class Output extends JFrame implements ActionListener {
+public class BankApp extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField nameField, amountField;
@@ -13,7 +13,7 @@ public class Output extends JFrame implements ActionListener {
 	private ArrayList<String> transactions;
 	private int balance;
 
-	public Output() {
+	public BankApp() {
 		super("Bank Application");
 		setSize(400, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,7 +45,7 @@ public class Output extends JFrame implements ActionListener {
 		balanceButton.setBounds(250, 150, 100, 30);
 		balanceButton.addActionListener(this);
 
-		balanceLabel = new JLabel("Balance: \u20B9 0");
+		balanceLabel = new JLabel("Balance: \u20B90");
 		balanceLabel.setBounds(50, 200, 150, 30);
 
 		add(nameLabel);
@@ -79,13 +79,21 @@ public class Output extends JFrame implements ActionListener {
 			for (String transaction : transactions) {
 				transactionHistory += transaction + "\n";
 			}
-			JOptionPane.showMessageDialog(null,
-					"Balance: $" + balance + "\nTransaction History:\n" + transactionHistory);
+//			JOptionPane.showMessageDialog(null,
+//					"Balance: $" + balance + "\nTransaction History:\n" + transactionHistory);
+			JTextArea textArea = new JTextArea(10, 30);
+			textArea.setEditable(false);
+			JScrollPane scrollPane = new JScrollPane(textArea);
+
+			textArea.setText("Balance: $" + balance + "\nTransaction History:\n" + transactionHistory);
+
+			JOptionPane.showMessageDialog(null, scrollPane, "Passbook",
+					JOptionPane.INFORMATION_MESSAGE);
 		}
 		balanceLabel.setText("Balance: \u20B9 " + balance);
 	}
 
 	public static void main(String[] args) {
-		new Output();
+		new BankApp();
 	}
 }
