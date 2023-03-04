@@ -1,8 +1,8 @@
 package crt_classes;
 
-class newThread extends Thread {
+class Thread123 extends Thread {
 	Thread t1,t2;
-	newThread() {
+	Thread123() {
 		t1 = new Thread(this, "Thread_1");
 		t2 = new Thread(this, "Thread_2");
 		t1.start();
@@ -18,7 +18,7 @@ class newThread extends Thread {
 public class Ecap {
 
 	public static void main(String[] args) {
-		new newThread();
+		new Thread123();
 	}
 
 }
