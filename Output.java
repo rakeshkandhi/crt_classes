@@ -1,6 +1,5 @@
 package crt_classes;
 
-import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
@@ -25,7 +24,7 @@ public class Output extends JFrame implements ActionListener {
 
 		nameLabel = new JLabel("Name:");
 		nameLabel.setBounds(50, 50, 50, 30);
-		
+
 		nameField = new JTextField();
 		nameField.setBounds(100, 50, 150, 30);
 
@@ -83,7 +82,7 @@ public class Output extends JFrame implements ActionListener {
 			JOptionPane.showMessageDialog(null,
 					"Balance: $" + balance + "\nTransaction History:\n" + transactionHistory);
 		}
-		balanceLabel.setText("Balance: $" + balance);
+		balanceLabel.setText("Balance: \u20B9 " + balance);
 	}
 
 	public static void main(String[] args) {
